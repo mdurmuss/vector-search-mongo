@@ -31,9 +31,6 @@ class LLM:
                  max_tokens: int, top_p: float, frequency_penalty: float,
                  presence_penalty: float,
                  temperature: float):
-        self.system_prompt = system_prompt
-
-        # create llm model
         self.llm_model = ChatOpenAI(temperature=temperature, model=model, max_tokens=max_tokens,
                                     model_kwargs={'presence_penalty': presence_penalty,
                                                   'frequency_penalty': frequency_penalty,
